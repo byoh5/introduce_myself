@@ -6,6 +6,7 @@
 .section {
   position: relative;
   padding-block: var(--space-9);
+  scroll-margin-top: 5.4rem;
 }
 
 .section-alt {
@@ -202,6 +203,7 @@
 @media (max-width: 52rem) {
   .section {
     padding-block: var(--space-8);
+    scroll-margin-top: 4.8rem;
   }
 
   .global-nav {
@@ -233,5 +235,9 @@
   .project-grid,
   .principles-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-grid {
+    gap: var(--space-6);
   }
 }

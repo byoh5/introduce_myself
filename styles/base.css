@@ -64,6 +64,10 @@ blockquote {
   margin: 0;
 }
 
+figure {
+  margin: 0;
+}
+
 .skip-link {
   position: absolute;
   left: -10000px;
