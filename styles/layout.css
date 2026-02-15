@@ -100,8 +100,30 @@
 }
 
 .hero {
+  position: relative;
+  isolation: isolate;
   overflow: clip;
   padding-top: calc(var(--space-9) + 1rem);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(140deg, rgb(5 19 60 / 94%) 12%, rgb(9 43 119 / 68%) 46%, rgb(3 14 42 / 92%) 100%),
+    url("../assets/images/hero-background.png") center / cover no-repeat;
+  z-index: -2;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 42%;
+  background: linear-gradient(180deg, rgb(244 241 234 / 0%) 0%, rgb(244 241 234 / 78%) 70%, rgb(244 241 234 / 100%) 100%);
+  z-index: -1;
+  pointer-events: none;
 }
 
 .hero-grid {
@@ -133,13 +155,13 @@
 .hero-orbit span {
   font-family: var(--font-mono);
   font-size: 0.74rem;
-  color: var(--color-muted);
+  color: rgb(209 232 255 / 84%);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  border: 1px dashed rgb(41 49 58 / 25%);
+  border: 1px dashed rgb(147 189 239 / 54%);
   padding: 0.38rem 0.52rem;
   border-radius: 999px;
-  background: rgb(255 255 255 / 44%);
+  background: rgb(2 18 56 / 38%);
 }
 
 .thesis-grid,
