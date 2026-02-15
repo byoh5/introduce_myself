@@ -142,28 +142,6 @@
   justify-self: end;
 }
 
-.hero-orbit {
-  pointer-events: none;
-  position: absolute;
-  inset: auto auto 6% -2%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  opacity: 0.75;
-}
-
-.hero-orbit span {
-  font-family: var(--font-mono);
-  font-size: 0.74rem;
-  color: rgb(209 232 255 / 84%);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border: 1px dashed rgb(147 189 239 / 54%);
-  padding: 0.38rem 0.52rem;
-  border-radius: 999px;
-  background: rgb(2 18 56 / 38%);
-}
-
 .thesis-grid,
 .principles-grid,
 .project-grid {
@@ -255,9 +233,5 @@
   .project-grid,
   .principles-grid {
     grid-template-columns: 1fr;
-  }
-
-  .hero-orbit {
-    display: none;
   }
 }
