@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Optional local env files
+.env
+.env.*
+
+# Documentation / planning files (not required for deployment)
+*.md
+docs/
+WEBPAGE_DESIGN_SPEC.md
+DEPLOY_GITHUB_PAGES.md
+applied_ai_systems_architect.txt

@@ -1,0 +1,46 @@
+:root {
+  --color-base: #f4f1ea;
+  --color-surface: #fffdf8;
+  --color-surface-strong: #e9e2d3;
+  --color-text: #1d232b;
+  --color-muted: #68707a;
+  --color-accent-copper: #b86b3a;
+  --color-accent-steel: #2f5b75;
+  --color-border: #c9c2b5;
+  --color-focus: #0f79b7;
+
+  --shadow-soft: 0 14px 36px rgb(19 23 27 / 10%);
+  --shadow-inset: inset 0 0 0 1px rgb(29 35 43 / 10%);
+
+  --font-display: "Space Grotesk", "Noto Sans KR", sans-serif;
+  --font-body: "IBM Plex Sans KR", "Noto Sans KR", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.9rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2.2rem;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 6.5rem;
+
+  --container: min(1120px, calc(100% - 2.5rem));
+
+  --transition-fast: 180ms ease;
+  --transition-med: 280ms ease;
+}
+
+@media (max-width: 52rem) {
+  :root {
+    --container: min(1120px, calc(100% - 1.4rem));
+    --space-8: 3.25rem;
+    --space-9: 4.25rem;
+  }
+}
