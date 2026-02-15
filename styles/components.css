@@ -111,6 +111,74 @@
   font-size: 0.85rem;
 }
 
+.hero-keyword-area {
+  margin-top: var(--space-7);
+  padding-bottom: var(--space-2);
+}
+
+.hero-keyword-title {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: rgb(196 220 248 / 88%);
+  margin-bottom: var(--space-3);
+}
+
+.hero-keyword-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.58rem;
+  max-width: 1100px;
+}
+
+.keyword-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  padding: 0.28rem 0.72rem;
+  border-radius: 999px;
+  border: 1px solid rgb(152 201 255 / 45%);
+  background: linear-gradient(180deg, rgb(14 42 108 / 60%) 0%, rgb(7 26 70 / 50%) 100%);
+  color: rgb(226 241 255 / 95%);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgb(0 8 30 / 25%);
+  animation: chip-float 8s ease-in-out infinite;
+}
+
+.keyword-chip:nth-child(3n + 1) {
+  animation-duration: 7.2s;
+  animation-delay: -1s;
+}
+
+.keyword-chip:nth-child(3n + 2) {
+  animation-duration: 8.8s;
+  animation-delay: -2.4s;
+}
+
+.keyword-chip:nth-child(3n) {
+  animation-duration: 9.6s;
+  animation-delay: -0.4s;
+}
+
+@keyframes chip-float {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -8px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .thesis-card,
 .principle-card,
 .project-card,
@@ -310,5 +378,25 @@
     width: 100%;
     max-width: none;
     padding: var(--space-2);
+  }
+
+  .hero-keyword-area {
+    margin-top: var(--space-5);
+  }
+
+  .hero-keyword-title {
+    font-size: 0.7rem;
+  }
+
+  .keyword-chip {
+    min-height: 1.85rem;
+    font-size: 0.68rem;
+    padding: 0.24rem 0.62rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .keyword-chip {
+    animation: none;
   }
 }
