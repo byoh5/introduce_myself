@@ -5,9 +5,11 @@
 
 @media print {
   :root {
-    --print-border: #d7dce4;
-    --print-text: #15181d;
-    --print-muted: #525a64;
+    --print-text: #111827;
+    --print-muted: #4b5563;
+    --print-subtle: #6b7280;
+    --print-border: #d9dee6;
+    --print-rule: #e7ebf0;
   }
 
   html,
@@ -17,49 +19,67 @@
 
   body {
     color: var(--print-text);
+    font-size: 10.1pt;
+    line-height: 1.42;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
   }
 
   .site-header,
   .nav-toggle,
   .screen-only,
-  .skip-link {
+  .skip-link,
+  .hero-side,
+  .fact-grid,
+  .quote-block,
+  #direction,
+  #contact {
     display: none !important;
   }
 
-  .print-only {
+  .print-only,
+  .screen-only.print-only {
     display: block !important;
   }
 
+  .section-index,
+  .eyebrow {
+    display: none !important;
+  }
+
   .container {
-    width: 100%;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
   }
 
-  .section,
-  .footer {
-    padding-block: 0 7mm;
+  .section {
+    padding: 0 0 5mm !important;
+    margin: 0 !important;
+    scroll-margin-top: 0;
   }
 
-  .section-alt,
-  .quote-block,
-  .fact-card,
-  .principle-card,
-  .domain-card,
-  .experience-card,
-  .detail-card,
-  .product-card,
-  .work-card,
-  .recognition-block,
-  .stat-card {
-    background: #fff !important;
-    box-shadow: none !important;
-    border-color: var(--print-border) !important;
+  .section + .section {
+    padding-top: 4.5mm !important;
+    border-top: 1px solid var(--print-border);
+  }
+
+  .section-alt {
+    background: none !important;
+    border: none !important;
   }
 
   .hero {
+    padding-top: 0 !important;
     overflow: visible;
-    padding-top: 0;
+    isolation: auto;
   }
 
   .hero::before,
@@ -70,89 +90,123 @@
   .hero-grid,
   .overview-grid,
   .experience-header,
-  .fact-grid,
-  .domain-grid,
   .detail-grid,
   .product-grid,
   .workstyle-grid,
   .contact-grid {
-    grid-template-columns: 1fr !important;
-    gap: 4mm !important;
+    display: block !important;
   }
 
-  .section-head {
-    margin-bottom: 4mm;
+  .hero-content,
+  .overview-copy {
+    display: block !important;
   }
 
-  .section-head h2,
   .hero h1 {
+    max-width: none;
+    margin: 0;
+    font-size: 23pt;
+    line-height: 0.98;
     color: var(--print-text) !important;
   }
 
-  .hero h1 {
-    font-size: 24pt;
-    max-width: none;
+  .hero-title-sub {
+    display: inline;
+    margin: 0 0 0 0.35rem;
+    font-size: 12pt;
+    color: var(--print-muted) !important;
   }
 
-  .hero-title-sub,
-  .hero-lead,
+  .hero-lead {
+    margin-top: 3mm;
+    max-width: none;
+    font-size: 11pt;
+    font-weight: 700;
+    color: var(--print-text) !important;
+  }
+
   .hero-copy,
   .section-intro,
   .section-copy,
-  .caption,
-  .print-note,
   .job-summary,
-  .footer-quote,
+  .impact-note,
   .stat-copy,
-  .stat-label,
-  .project-label,
-  .timeline-phase {
+  .caption,
+  .footer-quote {
     color: var(--print-muted) !important;
+  }
+
+  .hero-copy,
+  .section-copy {
+    max-width: none;
+    margin-top: 1.8mm;
+  }
+
+  .profile-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 3mm;
+    margin-top: 2.6mm;
+    padding-top: 2.4mm;
+    border-top: 1px solid var(--print-border);
+  }
+
+  .profile-contacts li {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .profile-contacts li + li::before {
+    content: "•";
+    margin-right: 3mm;
+    color: var(--print-subtle);
   }
 
   .profile-contacts a,
   .contact-list a {
-    color: var(--print-text) !important;
-    background: #fff !important;
-    border-color: var(--print-border) !important;
+    min-height: 0;
+    padding: 0 !important;
+    border: none !important;
+    background: none !important;
+    color: var(--print-muted) !important;
     text-decoration: none;
   }
 
-  .detail-list li,
-  .experience-card p,
-  .domain-card p,
-  .product-card p,
-  .work-card p,
-  .fact-card p,
-  .principle-card p,
-  .recognition-block p {
-    color: var(--print-muted) !important;
+  .section-head {
+    display: block;
+    margin-bottom: 2.8mm !important;
   }
 
-  .job-role,
-  .stat-value {
+  .section-head h2 {
+    font-family: var(--font-mono);
+    font-size: 9pt;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
     color: var(--print-text) !important;
   }
 
-  .portrait-card {
-    max-width: 46mm;
-    padding: 2mm;
-    background: #fff !important;
-    border-color: var(--print-border) !important;
-    box-shadow: none !important;
+  .principles-grid,
+  .domain-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 3.2mm 5mm !important;
   }
 
-  .hero-side {
-    justify-self: start;
+  .product-grid {
+    display: block !important;
   }
 
-  .detail-list,
-  .profile-contacts,
-  .contact-list {
-    gap: 2.2mm;
+  .detail-grid {
+    display: block !important;
   }
 
-  .quote-block,
+  #education .detail-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 4mm !important;
+  }
+
   .stat-card,
   .fact-card,
   .principle-card,
@@ -162,18 +216,127 @@
   .product-card,
   .work-card,
   .recognition-block {
-    break-inside: avoid;
-    page-break-inside: avoid;
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
   }
 
-  .impact-note,
+  .principle-card,
+  .domain-card,
+  .detail-card,
+  .recognition-block,
+  .product-card {
+    margin-bottom: 2.8mm;
+  }
+
+  .experience-list {
+    gap: 0 !important;
+  }
+
+  .experience-card {
+    break-inside: auto;
+    page-break-inside: auto;
+    margin-bottom: 4mm;
+  }
+
+  .experience-card + .experience-card {
+    border-top: 1px solid var(--print-border);
+    padding-top: 4mm !important;
+  }
+
   .experience-header {
-    border-color: var(--print-border);
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr) !important;
+    gap: 0 5mm !important;
+    align-items: start;
+    margin-bottom: 2.5mm;
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+  }
+
+  .timeline-phase,
+  .project-label,
+  .stat-label {
+    font-family: var(--font-mono);
+    font-size: 7.7pt !important;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--print-subtle) !important;
+  }
+
+  .job-role {
+    margin-top: 1mm;
+    color: var(--print-text) !important;
+    font-size: 9.8pt;
+    font-weight: 700;
+  }
+
+  .job-summary {
+    margin: 0;
+    font-size: 9.5pt;
+  }
+
+  .principle-card h3,
+  .domain-card h3,
+  .experience-card h3,
+  .detail-card h4,
+  .product-card h3,
+  .work-card h3,
+  .recognition-block h4 {
+    margin-bottom: 1.2mm !important;
+    color: var(--print-text) !important;
+    font-size: 11pt !important;
+    line-height: 1.22;
+  }
+
+  .detail-list {
+    gap: 1mm !important;
+    margin-top: 1.2mm;
+  }
+
+  .detail-list li {
+    padding-left: 0.85rem;
+    color: var(--print-muted) !important;
+    font-size: 9.6pt;
+  }
+
+  .detail-list li::before {
+    top: 0.48rem;
+    width: 0.24rem;
+    height: 0.24rem;
+    background: var(--print-subtle) !important;
+  }
+
+  .impact-note {
+    margin-top: 1.4mm;
+    padding-top: 1.4mm !important;
+    border-top: 1px solid var(--print-rule) !important;
+  }
+
+  #products .product-card + .product-card {
+    border-top: 1px solid var(--print-border);
+    padding-top: 3mm !important;
+  }
+
+  .section-intro {
+    max-width: none;
+    margin-bottom: 2.2mm !important;
   }
 
   .button,
   .nav-wrapper,
   .hero-actions {
     display: none !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  li {
+    orphans: 3;
+    widows: 3;
   }
 }
