@@ -41,3 +41,17 @@
     observer.observe(section);
   });
 })();
+
+(function () {
+  const printButtons = document.querySelectorAll('[data-print-resume]');
+
+  if (!printButtons.length) {
+    return;
+  }
+
+  printButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      window.print();
+    });
+  });
+})();

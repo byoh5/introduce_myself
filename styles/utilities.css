@@ -10,6 +10,12 @@
   white-space: nowrap;
 }
 
+.screen-only {}
+
+.print-only {
+  display: none !important;
+}
+
 .js .reveal {
   opacity: 0;
   transform: translateY(24px);

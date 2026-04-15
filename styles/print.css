@@ -1,0 +1,179 @@
+@page {
+  size: A4;
+  margin: 12mm;
+}
+
+@media print {
+  :root {
+    --print-border: #d7dce4;
+    --print-text: #15181d;
+    --print-muted: #525a64;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+  }
+
+  body {
+    color: var(--print-text);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .site-header,
+  .nav-toggle,
+  .screen-only,
+  .skip-link {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .section,
+  .footer {
+    padding-block: 0 7mm;
+  }
+
+  .section-alt,
+  .quote-block,
+  .fact-card,
+  .principle-card,
+  .domain-card,
+  .experience-card,
+  .detail-card,
+  .product-card,
+  .work-card,
+  .recognition-block,
+  .stat-card {
+    background: #fff !important;
+    box-shadow: none !important;
+    border-color: var(--print-border) !important;
+  }
+
+  .hero {
+    overflow: visible;
+    padding-top: 0;
+  }
+
+  .hero::before,
+  .hero::after {
+    display: none !important;
+  }
+
+  .hero-grid,
+  .overview-grid,
+  .experience-header,
+  .fact-grid,
+  .domain-grid,
+  .detail-grid,
+  .product-grid,
+  .workstyle-grid,
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 4mm !important;
+  }
+
+  .section-head {
+    margin-bottom: 4mm;
+  }
+
+  .section-head h2,
+  .hero h1 {
+    color: var(--print-text) !important;
+  }
+
+  .hero h1 {
+    font-size: 24pt;
+    max-width: none;
+  }
+
+  .hero-title-sub,
+  .hero-lead,
+  .hero-copy,
+  .section-intro,
+  .section-copy,
+  .caption,
+  .print-note,
+  .job-summary,
+  .footer-quote,
+  .stat-copy,
+  .stat-label,
+  .project-label,
+  .timeline-phase {
+    color: var(--print-muted) !important;
+  }
+
+  .profile-contacts a,
+  .contact-list a {
+    color: var(--print-text) !important;
+    background: #fff !important;
+    border-color: var(--print-border) !important;
+    text-decoration: none;
+  }
+
+  .detail-list li,
+  .experience-card p,
+  .domain-card p,
+  .product-card p,
+  .work-card p,
+  .fact-card p,
+  .principle-card p,
+  .recognition-block p {
+    color: var(--print-muted) !important;
+  }
+
+  .job-role,
+  .stat-value {
+    color: var(--print-text) !important;
+  }
+
+  .portrait-card {
+    max-width: 46mm;
+    padding: 2mm;
+    background: #fff !important;
+    border-color: var(--print-border) !important;
+    box-shadow: none !important;
+  }
+
+  .hero-side {
+    justify-self: start;
+  }
+
+  .detail-list,
+  .profile-contacts,
+  .contact-list {
+    gap: 2.2mm;
+  }
+
+  .quote-block,
+  .stat-card,
+  .fact-card,
+  .principle-card,
+  .domain-card,
+  .experience-card,
+  .detail-card,
+  .product-card,
+  .work-card,
+  .recognition-block {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .impact-note,
+  .experience-header {
+    border-color: var(--print-border);
+  }
+
+  .button,
+  .nav-wrapper,
+  .hero-actions {
+    display: none !important;
+  }
+}
