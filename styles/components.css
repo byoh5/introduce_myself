@@ -344,6 +344,63 @@
   gap: 0.85rem;
 }
 
+.product-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at top right, rgb(184 107 58 / 11%) 0%, transparent 32%),
+    linear-gradient(180deg, rgb(255 253 248 / 100%) 0%, rgb(255 250 242 / 96%) 100%);
+  box-shadow: var(--shadow-soft), var(--shadow-inset);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 44px rgb(29 35 43 / 13%), var(--shadow-inset);
+  border-color: rgb(184 107 58 / 28%);
+}
+
+.product-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.product-domain {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  max-width: 100%;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgb(47 91 117 / 22%);
+  background: rgb(47 91 117 / 8%);
+  color: var(--color-accent-steel);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.product-domain:hover {
+  background: rgb(47 91 117 / 14%);
+  border-color: rgb(47 91 117 / 34%);
+}
+
+.product-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.product-button {
+  min-width: 10.5rem;
+}
+
 .experience-card {
   display: grid;
   gap: var(--space-5);
@@ -389,6 +446,10 @@
 .impact-note {
   padding-top: var(--space-3);
   border-top: 1px solid rgb(41 49 58 / 9%);
+}
+
+.product-card .impact-note {
+  margin-top: auto;
 }
 
 .recognition-block {
@@ -551,6 +612,10 @@
 
   .button {
     flex: 1 1 auto;
+  }
+
+  .product-button {
+    min-width: 0;
   }
 
   .profile-contacts {

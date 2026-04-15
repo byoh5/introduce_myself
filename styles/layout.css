@@ -173,9 +173,13 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.product-grid,
 .workstyle-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.product-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
 }
 
 .experience-list {
