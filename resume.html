@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Byungyun Oh | One-Page Resume</title>
+  <meta name="description" content="오병윤의 A4 한 장 경력기술서 페이지. 경력, 강점, 기술, 학력, 독립 제품 개발 경험을 실리콘밸리 스타일의 one-page resume 구조로 정리했습니다.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/resume.css">
+</head>
+<body>
+  <div class="resume-toolbar screen-only">
+    <a class="resume-toolbar-link" href="./index.html">메인 페이지로 돌아가기</a>
+    <button class="resume-toolbar-button" type="button" data-print-resume>PDF로 저장</button>
+  </div>
+
+  <main class="resume-shell">
+    <article class="resume-sheet" aria-labelledby="resume-name">
+      <header class="resume-header">
+        <div>
+          <p class="resume-kicker">One-Page Resume</p>
+          <h1 id="resume-name" class="resume-name">Byungyun Oh <span>오병윤</span></h1>
+          <p class="resume-title">AI · Embedded Systems · Industrial Data · Product Engineering</p>
+        </div>
+        <ul class="resume-contact" aria-label="연락처">
+          <li><a href="mailto:andreabyfive@gmail.com">andreabyfive@gmail.com</a></li>
+          <li><a href="tel:+821095313579">010-9531-3579</a></li>
+        </ul>
+      </header>
+
+      <div class="resume-main-grid">
+        <section class="resume-primary">
+          <section class="resume-section">
+            <h2 class="resume-section-title">Summary</h2>
+            <p class="resume-summary">
+              15년 이상 Embedded 시스템 개발을 기반으로 산업 데이터 수집, Edge AI 적용, 서비스 개발, 현장 운영까지 연결해 온 엔지니어입니다.
+              기술을 실제 환경에서 동작하는 시스템으로 완성하는 데 강점이 있으며, 2026년 1월 이후에는 1인 개발자로서 SaaS와 실용 도구를 직접 기획·개발하고 있습니다.
+            </p>
+          </section>
+
+          <section class="resume-section">
+            <h2 class="resume-section-title">Professional Experience</h2>
+
+            <article class="resume-entry">
+              <div class="resume-entry-header">
+                <div>
+                  <h3 class="resume-company">Ingkle</h3>
+                  <p class="resume-role">Senior Research Engineer</p>
+                </div>
+                <p class="resume-date">2022.07 - 2026.01</p>
+              </div>
+              <ul class="resume-bullets resume-bullets-tight">
+                <li><strong>Industrial Data Platform:</strong> FANUC, OPC UA, MODBUS 기반 데이터 수집 플랫폼과 Docker 기반 Edge 처리 구조, MQTT / Kafka 실시간 전송 시스템을 구축했습니다.</li>
+                <li><strong>Applied AI System:</strong> 카메라, 레이저 스캐너, 엔코더를 연동한 AI 기반 파이프 형상 측정 시스템을 단독 수행했고 Python + C# 분석·시각화 시스템으로 완성했습니다.</li>
+                <li><strong>Operations:</strong> Kubernetes 배포, 현장 설치·유지보수, 공공·연구 과제 기반 예측 프로젝트까지 개발과 운영을 함께 담당했습니다.</li>
+              </ul>
+            </article>
+
+            <article class="resume-entry">
+              <div class="resume-entry-header">
+                <div>
+                  <h3 class="resume-company">EYENIX</h3>
+                  <p class="resume-role">Team Lead / Principal Engineer</p>
+                </div>
+                <p class="resume-date">2010.12 - 2022.06</p>
+              </div>
+              <ul class="resume-bullets resume-bullets-tight">
+                <li><strong>NPU Commercialization:</strong> CCTV용 SoC/AI 제품을 위해 NPU IP(OpenEdge, DeepX) 도입, 검증, SDK 개발 및 제품화를 수행했습니다.</li>
+                <li><strong>Autonomous SoC Leadership:</strong> 6개 기관이 참여한 다중센서 자율주행 SoC 프로젝트를 총괄하며 기술 조율, 시스템 구조 정리, ISO26262 대응을 이끌었습니다.</li>
+                <li><strong>Low-Level Systems:</strong> FPGA 기반 RISC-V Linux 구동을 검증하고 신규 칩 개발에 적용했습니다.</li>
+              </ul>
+            </article>
+
+            <article class="resume-entry">
+              <div class="resume-entry-header">
+                <div>
+                  <h3 class="resume-company">Xener systems</h3>
+                  <p class="resume-role">Engineer</p>
+                </div>
+                <p class="resume-date">2009 - 2010</p>
+              </div>
+              <ul class="resume-bullets resume-bullets-tight">
+                <li><strong>VoIP System Development:</strong> VoIP 인터넷 전화 시스템 개발을 수행하며 네트워크 기반 통신 시스템과 임베디드 구현 경험을 쌓았습니다.</li>
+              </ul>
+            </article>
+          </section>
+        </section>
+
+        <aside class="resume-secondary">
+          <section class="resume-section">
+            <h2 class="resume-section-title">Core Strengths</h2>
+            <ul class="resume-bullets resume-bullets-compact">
+              <li>Embedded → AI → Backend → UI → 운영까지 이어지는 End-to-End 설계 및 구현</li>
+              <li>NPU, RISC-V, Edge AI를 실제 제품과 프로젝트에 적용한 상용화 경험</li>
+              <li>산업 장비, 프로토콜, 장시간 운영 환경을 고려한 현장 중심 문제 해결</li>
+            </ul>
+          </section>
+
+          <section class="resume-section">
+            <h2 class="resume-section-title">Technical Domains</h2>
+            <div class="resume-side-block">
+              <h3>AI / Data</h3>
+              <p>Object Detection, Face Recognition, Keyword Spotting, Edge AI, 공공·산업 데이터 기반 예측 모델</p>
+            </div>
+            <div class="resume-side-block">
+              <h3>Embedded / System</h3>
+              <p>Linux, RTOS, Bootloader, Device Driver, RISC-V, Edge Device 데이터 처리</p>
+            </div>
+            <div class="resume-side-block">
+              <h3>Industrial / Ops</h3>
+              <p>FANUC, OPC UA, MODBUS, MQTT, Kafka, Docker, Kubernetes, 실시간 서비스 운영 구조</p>
+            </div>
+          </section>
+
+          <section class="resume-section">
+            <h2 class="resume-section-title">Education</h2>
+            <div class="resume-side-block">
+              <h3>성균관대학교 대학원</h3>
+              <p>전자전기컴퓨터공학과 · 자동화 연구실</p>
+              <p>전재욱 교수님 지도 아래 로봇 시스템, 산업용 프로토콜, 임베디드 시스템을 연구했습니다.</p>
+            </div>
+          </section>
+
+          <section class="resume-section">
+            <h2 class="resume-section-title">Independent Product Development</h2>
+            <ul class="resume-bullets resume-bullets-compact">
+              <li><strong>QuickQuote:</strong> Next.js + Supabase 기반 견적 SaaS와 usage 기반 과금 구조 설계</li>
+              <li><strong>Utility Tools:</strong> 개인 사용자와 1인 창업자를 위한 웹 도구 기획·개발</li>
+              <li><strong>Growth:</strong> 블로그·SNS·정책 정보 콘텐츠를 활용한 유입과 전환 구조 실험</li>
+            </ul>
+          </section>
+
+          <section class="resume-section">
+            <h2 class="resume-section-title">Recognition</h2>
+            <ul class="resume-bullets resume-bullets-compact">
+              <li>SK EcoPlant Tech Open Collaboration 우수상</li>
+              <li>SK OceanPlant 협업 기회 확보</li>
+              <li>블루테크 이노베이션 선정</li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </article>
+  </main>
+
+  <script src="./scripts/main.js" defer></script>
+</body>
+</html>
