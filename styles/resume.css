@@ -51,6 +51,8 @@ strong {
   z-index: 10;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 0.75rem;
   padding: 1rem;
   background: rgb(237 241 245 / 88%);
@@ -79,6 +81,18 @@ strong {
   background: var(--resume-accent);
   color: #fff;
   border-color: var(--resume-accent);
+}
+
+.resume-toolbar-button:disabled {
+  opacity: 0.72;
+  cursor: wait;
+}
+
+.resume-toolbar-status {
+  margin: 0;
+  min-height: 1.2rem;
+  font-size: 0.82rem;
+  color: var(--resume-muted);
 }
 
 .resume-shell {
