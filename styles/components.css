@@ -29,7 +29,8 @@
 .hero-lead {
   font-size: clamp(1.18rem, 1.25vw + 0.9rem, 1.7rem);
   font-weight: 700;
-  max-width: 22ch;
+  max-width: 36ch;
+  line-height: 1.35;
   color: rgb(232 244 255 / 96%);
 }
 
@@ -147,6 +148,8 @@
 
 .stat-card,
 .fact-card,
+.service-card,
+.featured-mini-card,
 .domain-card,
 .experience-card,
 .detail-card,
@@ -276,6 +279,8 @@
 .system-panel,
 .quote-block,
 .fact-card,
+.service-card,
+.featured-mini-card,
 .domain-card,
 .experience-card,
 .detail-card,
@@ -295,6 +300,8 @@
 .system-panel,
 .quote-block,
 .fact-card,
+.service-card,
+.featured-mini-card,
 .domain-card,
 .experience-card,
 .detail-card,
@@ -310,6 +317,8 @@
 .project-card h3,
 .system-panel h3,
 .fact-card h3,
+.service-card h3,
+.featured-mini-card h3,
 .domain-card h3,
 .experience-card h3,
 .detail-card h4,
@@ -326,6 +335,8 @@
 .system-panel p,
 .project-content p,
 .fact-card p,
+.service-card p,
+.featured-mini-card p,
 .domain-card p,
 .experience-card p,
 .detail-card p,
@@ -339,9 +350,66 @@
 .product-card,
 .work-card,
 .fact-card,
+.service-card,
+.featured-mini-card,
 .detail-card {
   display: grid;
   gap: 0.85rem;
+}
+
+.service-card {
+  min-height: 100%;
+  border-color: rgb(47 91 117 / 16%);
+  background:
+    linear-gradient(180deg, rgb(255 253 248 / 100%) 0%, rgb(247 250 249 / 96%) 100%);
+}
+
+.service-card h3 {
+  min-height: 3.1rem;
+}
+
+.featured-mini-card {
+  position: relative;
+  overflow: hidden;
+  border-color: rgb(184 107 58 / 28%);
+  background:
+    radial-gradient(circle at top right, rgb(47 91 117 / 10%) 0%, transparent 34%),
+    linear-gradient(180deg, rgb(255 253 248 / 100%) 0%, rgb(255 250 242 / 96%) 100%);
+  box-shadow: var(--shadow-soft), var(--shadow-inset);
+}
+
+.featured-mini-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-accent-steel), var(--color-accent-copper));
+}
+
+.featured-case-aside {
+  display: grid;
+  gap: var(--space-4);
+  align-content: center;
+}
+
+.featured-facts {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.featured-facts li {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.15rem;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.38rem 0.72rem;
+  border-radius: 999px;
+  background: rgb(47 91 117 / 9%);
+  border: 1px solid rgb(47 91 117 / 17%);
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 
 .detail-card-featured {
@@ -462,6 +530,17 @@
 
 .product-button {
   min-width: 10.5rem;
+}
+
+.engagement-note {
+  padding: var(--space-3);
+  border: 1px solid rgb(47 91 117 / 15%);
+  border-radius: var(--radius-md);
+  background: rgb(47 91 117 / 7%);
+}
+
+.engagement-note strong {
+  color: var(--color-accent-steel);
 }
 
 .experience-card {
@@ -681,6 +760,14 @@
     min-width: 0;
   }
 
+  .service-card h3 {
+    min-height: 0;
+  }
+
+  .featured-facts li {
+    width: 100%;
+  }
+
   .profile-contacts {
     gap: 0.55rem;
   }
@@ -716,6 +803,8 @@
 
   .stat-card,
   .fact-card,
+  .service-card,
+  .featured-mini-card,
   .domain-card,
   .experience-card,
   .detail-card,

@@ -155,6 +155,7 @@
 }
 
 .fact-grid,
+.service-grid,
 .domain-grid,
 .detail-grid,
 .product-grid,
@@ -166,6 +167,18 @@
 .fact-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: var(--space-6);
+}
+
+.service-grid {
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  margin-top: var(--space-5);
+}
+
+.featured-mini-card {
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: minmax(0, 1fr) minmax(17rem, 0.7fr);
+  align-items: center;
 }
 
 .domain-grid,
@@ -231,7 +244,8 @@
   .hero-grid,
   .timeline-item,
   .overview-grid,
-  .experience-header {
+  .experience-header,
+  .featured-mini-card {
     grid-template-columns: 1fr;
   }
 
@@ -243,6 +257,7 @@
   .project-grid,
   .principles-grid,
   .fact-grid,
+  .service-grid,
   .product-grid,
   .workstyle-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -289,6 +304,7 @@
   .project-grid,
   .principles-grid,
   .fact-grid,
+  .service-grid,
   .domain-grid,
   .detail-grid,
   .product-grid,
