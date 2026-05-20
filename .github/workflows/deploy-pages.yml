@@ -33,6 +33,7 @@ jobs:
           rm -rf _site
           mkdir -p _site
           cp index.html resume.html 404.html .nojekyll _site/
+          cp -R projects _site/
           cp -R styles scripts assets _site/
 
       - name: Upload artifact

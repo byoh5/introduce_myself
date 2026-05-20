@@ -68,7 +68,6 @@
           </p>
           <ul class="profile-contacts" aria-label="연락처">
             <li><a href="mailto:andreabyfive@gmail.com">andreabyfive@gmail.com</a></li>
-            <li><a href="tel:+821095313579">010-9531-3579</a></li>
           </ul>
           <div class="hero-actions screen-only">
             <a class="button button-primary" href="#experience">경력 보기</a>
@@ -308,15 +307,23 @@
                 <p class="impact-note">기존 Web UI의 안정성 문제를 해결하기 위해 PyQt 기반 Native UI로 전면 개선해 장시간 운영 환경에서도 안정적인 시스템을 구현했습니다.</p>
               </section>
 
-              <section class="detail-card">
-                <p class="project-label">AI Inspection</p>
-                <h4>AI 기반 파이프 형상 측정 시스템</h4>
+              <section class="detail-card detail-card-featured">
+                <div class="linked-card-head">
+                  <p class="project-label">AI Inspection</p>
+                  <a class="case-pill" href="./projects/pipe-shape-measurement/">상세 페이지</a>
+                </div>
+                <h4>
+                  <a class="case-title-link" href="./projects/pipe-shape-measurement/">AI 기반 파이프 형상 측정 시스템</a>
+                </h4>
                 <ul class="detail-list">
                   <li>약 1년간 진행된 프로젝트를 단독 수행</li>
                   <li>카메라, 레이저 스캐너, 엔코더 연동 기반 실시간 측정 시스템 개발</li>
                   <li>Edge Detection 기반 곡률 분석 및 그래프·영상 시각화 구현</li>
                 </ul>
                 <p class="impact-note">AI 처리는 Python, 시스템 구현은 C#(Windows)로 구성해 산업 현장에서 활용되는 품질 측정 시스템으로 완성했습니다.</p>
+                <div class="product-actions">
+                  <a class="button button-primary product-button case-cta" href="./projects/pipe-shape-measurement/">상세 사례 보기 <span aria-hidden="true">→</span></a>
+                </div>
               </section>
 
               <section class="detail-card">
@@ -346,8 +353,8 @@
               <p class="project-label">Recognition</p>
               <h4>기술 발표 및 협업 성과</h4>
               <ul class="detail-list">
-                <li>SK EcoPlant Tech Open Collaboration에서 실시간 형상 측정 시스템 발표 및 우수상 수상</li>
-                <li>SK OceanPlant 협업 기회 확보</li>
+                <li>2025 Tech Open Collaboration에서 실시간 형상 측정 시스템 발표 및 우수상 수상</li>
+                <li>제강 공정 적용 가능성을 바탕으로 후속 협업 논의 기회 확보</li>
                 <li>블루테크 이노베이션 선정(해양수산과학기술진흥원)</li>
               </ul>
             </section>
@@ -437,9 +444,30 @@
           <h2 id="products-title">Independent Product Development</h2>
         </div>
         <p class="section-intro reveal" data-reveal>
-          2026년 1월 이후에는 1인 개발자로서 실제 사용자의 반복 문제를 해결하는 SaaS와 웹 도구를 직접 기획·개발·운영하고 있습니다.
+          2026년 1월 이후에는 1인 개발자로서 SaaS와 웹 도구를 직접 기획·개발·운영하고 있습니다.
+          소상공인용 업무 도구에서 출발해, 최근에는 산업 현장의 파일·DB·설비·API 데이터를 안정적으로 모으고 운영 상태를 확인하는 TB-FLOW 데이터 수집기 방향으로 제품 범위를 확장하고 있습니다.
         </p>
         <div class="product-grid">
+          <article class="product-card reveal" data-reveal>
+            <div class="product-card-head">
+              <div>
+                <p class="project-label">Live Demo Console</p>
+                <h3>TB-FLOW</h3>
+              </div>
+              <a class="product-domain" href="https://demo-web-kappa-lake.vercel.app/" target="_blank" rel="noreferrer">demo-web-kappa-lake.vercel.app</a>
+            </div>
+            <p>TB-FLOW는 파일, DB, 설비 신호, API 데이터를 한 곳으로 모으고 수집 상태와 품질을 운영자가 확인할 수 있게 만든 데이터 수집기 콘셉트입니다.</p>
+            <ul class="detail-list">
+              <li>파일, 데이터베이스, 설비, API 커넥터의 수집 상태와 최신 데이터 흐름 관리</li>
+              <li>수집 지연, 품질 저하, 소스 비활성화 같은 운영 이슈를 알림 큐로 시각화</li>
+              <li>수집된 신호를 Explorer와 Assistant 리포트로 연결해 현장 데이터 활용까지 확장</li>
+            </ul>
+            <div class="product-actions">
+              <a class="button button-primary product-button" href="https://demo-web-kappa-lake.vercel.app/" target="_blank" rel="noreferrer">데모 바로가기</a>
+            </div>
+            <p class="impact-note">산업 데이터 수집 플랫폼 경험을 바탕으로, 수집기 운영과 데이터 활용 흐름을 제품 형태로 정리했습니다.</p>
+          </article>
+
           <article class="product-card reveal" data-reveal>
             <div class="product-card-head">
               <div>
@@ -522,7 +550,6 @@
       <p>협업, 제안, 채용 검토 또는 프로젝트 논의가 필요하면 아래 채널로 연락하실 수 있습니다.</p>
       <div class="contact-list">
         <a href="mailto:andreabyfive@gmail.com">andreabyfive@gmail.com</a>
-        <a href="tel:+821095313579">010-9531-3579</a>
       </div>
       <div class="hero-actions screen-only">
         <a class="button button-primary" href="./resume.html">경력기술서 보기</a>

@@ -1,6 +1,10 @@
 (function () {
   const navLinks = Array.from(document.querySelectorAll('#global-nav a'));
-  const sections = navLinks
+  const pageAnchorLinks = navLinks.filter(function (link) {
+    const href = link.getAttribute('href');
+    return href && href.charAt(0) === '#';
+  });
+  const sections = pageAnchorLinks
     .map(function (link) {
       const id = link.getAttribute('href');
       return id ? document.querySelector(id) : null;
@@ -12,7 +16,7 @@
   }
 
   const setActiveLink = function (id) {
-    navLinks.forEach(function (link) {
+    pageAnchorLinks.forEach(function (link) {
       const isMatch = link.getAttribute('href') === '#' + id;
       link.classList.toggle('is-active', isMatch);
       if (isMatch) {
